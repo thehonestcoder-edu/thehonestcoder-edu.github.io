@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources | The Honest Coder</title>
+    <style>
+        body { background-color: #0b0b0b; color: #ffffff; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; }
+        header { padding: 40px 20px; text-align: center; border-bottom: 1px solid #222; }
+        .back-btn { color: #00FFFF; text-decoration: none; font-size: 14px; display: block; margin-bottom: 20px; }
+        .container { max-width: 1000px; margin: 50px auto; padding: 0 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .card { background: #161616; border: 1px solid #333; border-radius: 15px; padding: 25px; transition: 0.3s; position: relative; overflow: hidden; }
+        .card:hover { border-color: #00FFFF; transform: translateY(-5px); }
+        .badge { background: #00FFFF; color: #000; font-size: 10px; font-weight: bold; padding: 5px 10px; border-radius: 5px; position: absolute; top: 15px; right: 15px; }
+        .card h3 { margin-top: 10px; font-size: 20px; }
+        .card p { color: #aaa; font-size: 14px; min-height: 40px; }
+        .download-btn { display: block; text-align: center; background: #00FFFF; color: #000; text-decoration: none; font-weight: bold; padding: 12px; border-radius: 8px; margin-top: 20px; }
+        .locked-btn { display: block; text-align: center; background: #333; color: #777; text-decoration: none; font-weight: bold; padding: 12px; border-radius: 8px; margin-top: 20px; cursor: not-allowed; }
+        footer { text-align: center; padding: 50px; color: #444; font-size: 12px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="index.html" class="back-btn">← Back to Main Hub</a>
+    <h1 style="letter-spacing: 3px; color: #00FFFF;">RESOURCE VAULT</h1>
+    <p>Premium guides for logic-based learning.</p>
+</header>
+
+<div class="container">
+    <div class="grid">
+
+        <div class="card">
+            <span class="badge">MATH</span>
+            <h3>Trick #1: Squaring (Ends in 5)</h3>
+            <p>Calculate squares like 35, 75, or 105 in under 3 seconds using logic, not rote memorization.</p>
+            <a href="pdfs/math-trick-1.pdf" download class="download-btn">DOWNLOAD PDF</a>
+        </div>
+
+        <div class="card">
+            <span class="badge">MATH</span>
+            <h3>Trick #2: Multi-by-11</h3>
+            <p>Master the "Split & Add" method to solve complex 2-digit multiplications mentally.</p>
+            <a href="#" class="locked-btn">COMING SOON</a>
+        </div>
+
+        <div class="card">
+            <span class="badge">SYSTEMS</span>
+            <h3>Python: OS Module</h3>
+            <p>A stealthy guide to automating your file system using Python's built-in libraries.</p>
+            <a href="#" class="locked-btn">COMING SOON</a>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    &copy; 2026 The Honest Coder | thehonestcoder-edu.github.io
+</footer>
+
+</body>
+</html>
