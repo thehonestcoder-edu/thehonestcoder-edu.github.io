@@ -9,6 +9,52 @@
     <script src="https://cdn.tailwindcss.com"></script>
     
     <style>
+        .user-tag {
+            display: block;
+            margin-top: 10px;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.6); /* Dimmer than the main text */
+            font-style: italic;
+        }
+        /* Container for the testimonials */
+        .testimonial-container {
+            position: relative;
+            height: 150px; /* Adjust based on text length */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 40px 0;
+        }
+        
+        /* Individual Glass Cards */
+        .testimonial-card {
+            position: absolute;
+            width: 80%;
+            max-width: 500px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05); /* See-through white */
+            backdrop-filter: blur(10px); /* Glass blur effect */
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            text-align: center;
+            color: #fff;
+            box-shadow: 0 0 20px rgba(0, 255, 170, 0.2); /* Soft green glow */
+            opacity: 0;
+            animation: fadeCycle 12s infinite;
+        }
+        
+        /* The Timing Logic (For 3 cards) */
+        .testimonial-card:nth-child(2) { animation-delay: 4s; }
+        .testimonial-card:nth-child(3) { animation-delay: 8s; }
+        
+        @keyframes fadeCycle {
+            0% { opacity: 0; transform: translateY(10px); }
+            10% { opacity: 1; transform: translateY(0); }  /* Fade in & slide up */
+            30% { opacity: 1; }                             /* Stay visible */
+            40% { opacity: 0; transform: translateY(-10px); } /* Fade out & slide up */
+            100% { opacity: 0; }
+        }
+        
         html { 
             scroll-behavior: smooth; 
         }
@@ -67,6 +113,13 @@
             </div>
             <div class="w-full h-4 bg-black rounded-full border border-gray-700 overflow-hidden">
                 <div id="progress-fill" class="h-full bg-gradient-to-r from-cyan-400 to-orange-500 transition-all duration-1000" style="width: 0%"></div>
+            </div>
+        </div>
+
+        <div class="testimonial-slider">
+            <div class="testimonial-card">
+                <p>"The 'Star' thing actually makes sense. I don't have to carry numbers in my head anymore."</p>
+                <span class="user-tag">— 10th Grade Peer</span>
             </div>
         </div>
         
@@ -161,4 +214,5 @@
     </script>
 </body>
 </html>
+
 
